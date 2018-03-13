@@ -15,6 +15,7 @@ public class StudentController {
 
     public ModelAndView myDefault(){
         ModelAndView modelAndView=new ModelAndView("index");
+        modelAndView.addObject("student",new StudentCO());
         return modelAndView;
     }
 
@@ -69,7 +70,7 @@ public class StudentController {
 
     }
 
-    public ModelAndView get6(@ModelAttribute("objx") StudentCO obj){
+    public ModelAndView get6(@ModelAttribute StudentCO obj){
         ModelAndView modelAndView=new ModelAndView("studentData");
         return modelAndView;
     }
